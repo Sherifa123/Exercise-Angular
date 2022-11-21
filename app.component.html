@@ -1,0 +1,93 @@
+<!-- <div clas="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div>
+        <button
+          class="btn btn-success"
+          [ngClass]="{ 'active-btn': numberChosen === 2 }"
+          (click)="calculate(2)"
+        >
+          Numbers Divisible By 2
+        </button>
+      </div>
+      <div>
+        <button
+          class="btn btn-success"
+          [ngClass]="{ 'active-btn': numberChosen === 3 }"
+          (click)="calculate(3)"
+        >
+          Numbers Divisible By 3
+        </button>
+      </div>
+      <div>
+        <button
+          class="btn btn-success"
+          [ngClass]="{ 'active-btn': numberChosen === 5 }"
+          (click)="calculate(5)"
+        >
+          Numbers Divisible By 5
+        </button>
+      </div>
+      <div>
+        <button
+          class="btn btn-success"
+          [ngClass]="{ 'active-btn': numberChosen === 10 }"
+          (click)="calculate(10)"
+        >
+          Numbers Divisible By 10
+        </button>
+      </div>
+      <div>
+        <button
+          class="btn btn-danger"
+          [disabled]="isClearDisabled"
+          (click)="calculate(1)"
+        >
+          Clear
+        </button>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <p
+        *ngFor="let n of numbers"
+        [ngClass]="{
+          highlight: n % numberChosen === 0 && !isClearDisabled
+        }"
+        [ngStyle]="{
+          'font-size':
+            n % numberChosen === 0 && !isClearDisabled ? '30px' : '24px'
+        }"
+      >
+        {{ n }}
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngIf="numberChosen > 1" class="class-md-12">
+      Number Highlighted Above are divisible by :{{ numberChosen }}
+    </div>
+  </div>
+</div> -->
+<!-- <div>
+  <h1>This is a Parent!</h1>
+  <input type="text" [(ngModel)]="courseName" />
+  <p>Child Input: Programming in {{ text }}</p>
+</div>
+<div>
+  <app-child
+    [childCourseName]="courseName"
+    (sendMessageEmitter)="receiveMessage($event)"
+  >
+  </app-child>
+</div> -->
+<div class="body"></div>
+<div class="parent">
+  <p>This is ths PARENT COMPONENT</p>
+  <p>Choose any button from the below</p>
+  <button class="btn btn-primary" (click)="search('animals')">Animals</button>
+  <button class="btn btn-primary" (click)="search('colors')">Colors</button>
+  <button class="btn btn-primary" (click)="search('fruits')">Fruits</button>
+</div>
+<div>
+  <app-child [childDisplay]="display"></app-child>
+</div>

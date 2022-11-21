@@ -1,0 +1,11 @@
+<!-- <p>child works!</p>
+<div>
+  <h1>This is the child!</h1>
+  <p>Parent Input: I Love {{ childCourseName }}</p>
+  <input type="text" (input)="sendMessageToParent($event)" />
+</div> -->
+<div class="body"></div>
+<div class="child">
+  <p>This is CHILD COMPONENT</p>
+  <p *ngFor="let a of childDisplay">{{ a }}</p>
+</div>
